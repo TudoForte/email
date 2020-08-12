@@ -37,9 +37,22 @@
         
         <style>
 
+          .wrapper-content{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+          }
+
+          @media(max-width: 600px){
+            .wrapper-product{
+              flex: 0 0;
+            }
+          }
+
           .wrapper-product{
+            flex: 0 0 0;
             color: #333;
-            width: 180px;
+            width: 190px;
             margin: 5px;
             padding: 10px;
             font-family: Arial, Helvetica, sans-serif; 
@@ -74,7 +87,7 @@
             color: #fff;
             background-color:#00C500;
             border-radius: 5px;
-            width: 60%;
+            width: 70%;
             height: 30px;
             display:flex;
             margin: 10px auto;
@@ -87,7 +100,7 @@
         </style>
 
       <tr style="width:100%;text-align:center; background-color: white; padding: 20px;">
-        <td style="display: flex;">
+        <td class="wrapper-content">
 
           <div class="wrapper-product">
             <a target="_blank" style="text-decoration: none; appearance: none; color: #333;" href="https://www.tudoforte.com.br/camera-intelbras-vhl-1220-b-full-hd-1080p-bullet-hdcvi-lite">
@@ -118,11 +131,6 @@
               <a class="product-button"><img width="15px" height="15px" src="img/logo-branco.png"> <span style="margin-left: 5px; margin-right: 5px;">|</span> Comprar</a>
             </a>
           </div>
-
-        </td>   
-      </tr>
-      <tr style="width:100%;text-align:center; background-color: white; padding: 20px;">
-        <td style="display: flex;">
 
           <div class="wrapper-product">
             <a target="_blank" style="text-decoration: none; appearance: none; color: #333;" href="https://www.tudoforte.com.br/kit-intelbras-8-cameras-full-hd-1080p-vhl-1220-b-dvr-3108-intelbras-acessorios">
