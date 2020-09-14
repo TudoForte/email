@@ -1,0 +1,629 @@
+
+<!doctype html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>Tudo Forte</title>
+  <style>
+    /* -------------------------------------
+          GLOBAL RESETS
+      ------------------------------------- */
+
+    /*All the styling goes here*/
+
+    img {
+      border: none;
+      -ms-interpolation-mode: bicubic;
+      max-width: 100%;
+    }
+
+    body {
+      background-color: #f6f6f6;
+      font-family: sans-serif;
+      -webkit-font-smoothing: antialiased;
+      font-size: 14px;
+      line-height: 1.4;
+      margin: 0;
+      padding: 0;
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    table {
+      border-collapse: separate;
+      mso-table-lspace: 0pt;
+      mso-table-rspace: 0pt;
+      width: 100%;
+    }
+
+    table td {
+      font-family: sans-serif;
+      font-size: 14px;
+      vertical-align: top;
+    }
+
+    /* -------------------------------------
+          BODY & CONTAINER
+      ------------------------------------- */
+
+    .body {
+      background-color: #f6f6f6;
+      width: 100%;
+    }
+
+    /* Set a max-width, and make it display as block so it will automatically stretch to that width, but will also shrink down on a phone or something */
+    .container {
+      display: block;
+      margin: 0 auto !important;
+      /* makes it centered */
+      max-width: 620px;
+      padding: 10px;
+      width: 620px;
+    }
+
+    /* This should also be a block element, so that it will fill 100% of the .container */
+    .content {
+      box-sizing: border-box;
+      display: block;
+      margin: 0 auto;
+      max-width: 620px;
+      padding: 10px;
+    }
+
+    /* -------------------------------------
+          HEADER, FOOTER, MAIN
+      ------------------------------------- */
+    .main {
+      background: #ffffff;
+      border-radius: 3px;
+      width: 100%;
+    }
+
+    .wrapper {
+      box-sizing: border-box;
+      /* padding: 20px; */
+    }
+
+    .content-block {
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+
+    .footer {
+      clear: both;
+      margin-top: 10px;
+      /* text-align: center; */
+      width: 100%;
+    }
+
+    .footer td,
+    .footer p,
+    .footer span,
+    .footer a {
+      color: #999999;
+      font-size: 12px;
+
+    }
+
+    /* -------------------------------------
+          TYPOGRAPHY
+      ------------------------------------- */
+    h1,
+    h2,
+    h3,
+    h4 {
+      color: #000000;
+      font-family: sans-serif;
+      font-weight: 400;
+      line-height: 1.4;
+      margin: 0;
+      /* margin-bottom: 30px; */
+    }
+
+    h1 {
+      font-size: 35px;
+      font-weight: 300;
+      text-align: center;
+      text-transform: capitalize;
+    }
+
+    p,
+    ul,
+    ol {
+      font-family: sans-serif;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+      margin-bottom: 15px;
+    }
+
+    p li,
+    ul li,
+    ol li {
+      list-style-position: inside;
+      margin-left: 5px;
+    }
+
+    a {
+      color: #3498db;
+      text-decoration: underline;
+    }
+
+    /* -------------------------------------
+          BUTTONS
+      ------------------------------------- */
+    .btn {
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .btn>tbody>tr>td {
+      padding-bottom: 15px;
+    }
+
+    .btn table {
+      width: auto;
+    }
+
+    .btn table td {
+      background-color: #ffffff;
+      border-radius: 5px;
+      text-align: center;
+    }
+
+    .btn a {
+      background-color: #ffffff;
+      border: solid 1px #3498db;
+      border-radius: 5px;
+      box-sizing: border-box;
+      color: #3498db;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 14px;
+      font-weight: bold;
+      margin: 0;
+      padding: 12px 25px;
+      text-decoration: none;
+      text-transform: capitalize;
+    }
+
+    .btn-primary table td {
+      background-color: #3498db;
+    }
+
+    .btn-primary a {
+      background-color: #3498db;
+      border-color: #3498db;
+      color: #ffffff;
+    }
+
+    /* -------------------------------------
+          OTHER STYLES THAT MIGHT BE USEFUL
+      ------------------------------------- */
+    .last {
+      margin-bottom: 0;
+    }
+
+    .first {
+      margin-top: 0;
+    }
+
+    .align-center {
+      text-align: center;
+    }
+
+    .align-right {
+      text-align: right;
+    }
+
+    .align-left {
+      text-align: left;
+    }
+
+    .clear {
+      clear: both;
+    }
+
+    .mt0 {
+      margin-top: 0;
+    }
+
+    .mb0 {
+      margin-bottom: 0;
+    }
+
+    .preheader {
+      color: transparent;
+      display: none;
+      height: 0;
+      max-height: 0;
+      max-width: 0;
+      opacity: 0;
+      overflow: hidden;
+      mso-hide: all;
+      visibility: hidden;
+      width: 0;
+    }
+
+    .powered-by {
+      text-decoration: none;
+      text-align: center;
+    }
+
+    hr {
+      border: 0;
+      border-bottom: 1px solid #f6f6f6;
+      margin: 20px 0;
+    }
+
+    /* -------------------------------------
+          RESPONSIVE AND MOBILE FRIENDLY STYLES
+      ------------------------------------- */
+    @media only screen and (max-width: 620px) {
+      table[class=body] h1 {
+        font-size: 28px !important;
+        margin-bottom: 10px !important;
+      }
+
+      table[class=body] p,
+      table[class=body] ul,
+      table[class=body] ol,
+      table[class=body] td,
+      table[class=body] span,
+      table[class=body] a {
+        font-size: 16px !important;
+      }
+
+      table[class=body] .wrapper,
+      table[class=body] .article {
+        padding: 10px !important;
+      }
+
+      table[class=body] .content {
+        padding: 0 !important;
+      }
+
+      table[class=body] .container {
+        padding: 0 !important;
+        width: 100% !important;
+      }
+
+      table[class=body] .main {
+        border-left-width: 0 !important;
+        border-radius: 0 !important;
+        border-right-width: 0 !important;
+      }
+
+      table[class=body] .btn table {
+        width: 100% !important;
+      }
+
+      table[class=body] .btn a {
+        width: 100% !important;
+      }
+
+      table[class=body] .img-responsive {
+        height: auto !important;
+        max-width: 100% !important;
+        width: auto !important;
+      }
+    }
+
+    /* -------------------------------------
+          PRESERVE THESE STYLES IN THE HEAD
+      ------------------------------------- */
+    @media all {
+      .ExternalClass {
+        width: 100%;
+      }
+
+      .ExternalClass,
+      .ExternalClass p,
+      .ExternalClass span,
+      .ExternalClass font,
+      .ExternalClass td,
+      .ExternalClass div {
+        line-height: 100%;
+      }
+
+      .apple-link a {
+        color: inherit !important;
+        font-family: inherit !important;
+        font-size: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+        text-decoration: none !important;
+      }
+
+      #MessageViewBody a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      .btn-primary table td:hover {
+        background-color: #34495e !important;
+      }
+
+      .btn-primary a:hover {
+        background-color: #34495e !important;
+        border-color: #34495e !important;
+      }
+    }
+
+
+    /* -------------------------------------
+          MY SETTINGS
+      ------------------------------------- */
+    .logo {
+      display: block;
+      margin: 0 auto;
+      padding: 10px;
+      width: 300px;
+    }
+
+    .vitrine-wrapper {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .categoria {
+      background-color: #f6f6f6;
+      text-align: center;
+    }
+
+    .mais-informacoes {
+      padding: 30px;
+    }
+
+		.titulo{
+			text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3c5099;
+			text-transform: uppercase;
+			margin: 20px;
+		}
+
+		.conteudo{
+			padding-left: 15px;
+			padding-right: 15px;
+			font-size: 1rem;
+			text-align: justify;
+			line-height: 1.5rem;
+		}
+
+		.itens-carrinho{
+			text-align: center;
+		}
+
+		.botao-comprar{
+			background-color: #00c500;
+			display: block;
+			border-radius: 20px;
+			margin: 0 auto;
+			width: 90%;
+			color: #ffff;
+		}
+
+		.botao-comprar:hover{
+			background-color: green;
+		}
+
+    .mais-informacoes > a {
+      text-decoration: none;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3c5099;
+    }
+
+    .footer-endereco {
+      text-align: center;
+    }
+
+    .footer-google {
+      text-align: center;
+    }
+
+    .footer-central {
+      text-align: center;
+    }
+
+    .redes-sociais {
+      text-align: center;
+      /* display: flex;
+      justify-content: space-between; */
+    }
+
+    .insta {
+      margin-right: 10px;
+    }
+
+    .face {
+      margin-right: 10px;
+    }
+
+    .youtube {
+      margin-right: 10px;
+    }
+
+    .whats {
+      margin-right: -10px;
+    }
+
+    .vitrine {
+      max-width: 30%;
+    }
+
+
+    @media(max-width: 426px) {
+      .logo {
+        width: 200px;
+      }
+
+
+      .vitrine {
+        max-width: 45%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <span class="preheader">This is preheader text. Some clients will show this text as a preview.</span>
+  <table role="presentation" border="0" cellpadding="0" cellspacing="0" class="body">
+    <tr>
+      <td>&nbsp;</td>
+      <td class="container">
+        <div class="content">
+
+
+          <!-- START CENTERED WHITE CONTAINER -->
+          <table role="presentation" class="main">
+
+            <!-- START MAIN CONTENT AREA -->
+            <tr>
+              <td class="wrapper">
+                <table role="presentation" border="0" cellpadding="0" cellspacing="0">
+                
+
+                  <tr>
+                    <td>
+                      <a target="_blank"
+												href="https://www.parceirotudoforte.com.br/atendimento">
+                        <img src="img/campanha-setembro-2020.png" alt="Campanha de Setembro" width="620px">
+                      </a>
+                    </td>
+									</tr>
+
+									<tr class="categoria">
+                    <td>
+											<h1 class="titulo">Participe da CAMPANHA DE VENDAS do MÊS DE SETEMBRO</h1>
+                    </td>
+									</tr>
+									
+									<tr>
+										<td>
+                    	
+											<p class="conteudo" style="padding-top: 15px;">
+                        A Cada R$500 de Vendas, Ganhe 1 Cupom Para Concorra a PRÊMIOS EXCLUSIVOS*. Aproveite!
+                      </p>
+
+                        <ul>
+                          <li style="font-size: 1rem;">1° Premio: Churrasqueira Elétrica</li>
+                          <li style="font-size: 1rem;">2° Prêmio: Pipoqueira de Tigela Sem Óleo</li>
+                          <li style="font-size: 1rem;">3° Prêmio: Garrafa Térmica 500ML</li>
+                          <li style="font-size: 1rem;">4° Prêmio: Garrafa Térmica 500ML</li>
+                        </ul> 
+                  
+											<p class="conteudo">
+                        Ofereça Condições Especiais Para o Seu Cliente Ficar Mais Seguro e Faça Mais Vendas Ainda Hoje. Ele pode comprar Parcelado em até 10x Sem Juros ou com 7% Desconto à Vista. Você sempre receberá sua comissão à vista, independente da forma de pagamento escolhida pelo seu cliente.
+                      </p>
+											<p class="conteudo">
+                        Corre que é por tempo limitado. Você ainda não finalizou seu Cadastro de Parceiro Tudo Forte?
+                      </p>
+										
+											<p class="conteudo">
+                        Fale com a Nossa Equipe: <a href="https://www.parceirotudoforte.com.br/atendimento">Clique Aqui</a>
+                      </p>
+										
+										</td>
+									</tr>
+
+					
+                </table>
+              </td>
+            </tr>
+
+            <!-- END MAIN CONTENT AREA -->
+          </table>
+          <!-- END CENTERED WHITE CONTAINER -->
+
+      
+  <table width="600" height="0" border="0" cellpadding="0" cellspacing="0" align="center" style="width:550px;margin-top:30px;">
+    <tbody>
+      <!-- <tr style="display:block">
+        <td><a href="https://www.parceirotudoforte.com.br/" target="_blank" class="CToWUd">
+            <img style="display:block;border-radius:5px;width:600px;height:200px;border-width:0px;border-style:solid; margin-bottom:20px; border: 1px solid white;" src="img/banner-revendedor-email-roda.png" alt="Seja Parceiro Tudo Forte">
+          </a>
+        </td>
+      </tr> -->
+
+      <table id="m_5304305021460022736m_-4135165898405030599navegueporesporte" width="600" height="0" border="0" cellpadding="0" cellspacing="0" align="center">
+        <tbody>
+          <tr style="display:block">
+            <td><img border="0" width="600" height="352" usemap="#m_5304305021460022736_m_-4135165898405030599_6itens_g" alt="" style="border-radius:0px 0px 5px 5px;display:block" src="img/categorias.png" class="CToWUd a6T">
+
+              <map name="m_5304305021460022736_m_-4135165898405030599_6itens_g">
+                <area alt="Kit CFTV" title="Kit CFTV" shape="rect" coords="24,52,201,152" style="outline:none" href="https://www.tudoforte.com.br/kit-cameras-de-seguranca-cftv" target="_blank">
+                <area alt="Câmeras" title="Câmeras" shape="rect" coords="211,52,388,152" style="outline:none" href="https://www.tudoforte.com.br/cameras-de-seguranca-cftv" target="_blank">
+                <area alt="Gravadores de Vídeo" title="Gravadores de Vídeo" shape="rect" coords="399,52,576,152" style="outline:none" href="https://www.tudoforte.com.br/dvr-stand-alone-gravadores-de-imagem" target="_blank">
+                <area alt="Motor de Portão" title="Motor de Portão" shape="rect" coords="24,161,201,261" style="outline:none" href="https://www.tudoforte.com.br/automatizadores" target="_blank">
+                <area alt="Alarmes" title="Alarmes" shape="rect" coords="211,161,388,261" style="outline:none" href="https://www.tudoforte.com.br/alarme" target="_blank">
+                <area alt="Interfone" title="Interfone" shape="rect" coords="398,161,576,261" style="outline:none" href="https://www.tudoforte.com.br/interfonia" target="_blank">
+                <area alt="Confira na Tudo Forte" title="Confira na Tudo Forte" shape="rect" coords="195,281,404,321" style="outline:none" href="https://www.tudoforte.com.br" target="_blank">
+              </map>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table width="600" height="0" border="0" cellpadding="0" cellspacing="0" align="center" style="width:550px;margin-top:30px;">
+        <tbody>
+          <tr>
+            <td style="max-width:600px;width:100%; text-align: center;">
+              <font size="1" face="Arial" color="#121135" cellpadding="" style="font-size:11px;" bgcolor="#e5e5e538">
+                <p>Siga a gente nas Redes Sociais:</p>
+              </font>
+              <a href="https://www.facebook.com/tudoforte"><img class="face" src="https://raphaelfreire.github.io/email/img/face.png" alt="facebook" width="30px"></a>
+              <a href="https://www.instagram.com/tudoforte.com.br"><img class="insta" src="https://raphaelfreire.github.io/email/img/insta.png" alt="insta" width="30px"></a>
+              <a href="https://www.youtube.com/user/tudoforte"><img class="youtube" src="https://raphaelfreire.github.io/email/img/youtube.png" alt="youtube" width="40px"></a>
+              <a href="https://api.whatsapp.com/send?phone=5517982305951&text=Fale%20com%20a%20Tudo%20Forte"><img class="whats" src="https://raphaelfreire.github.io/email/img/whats.png" alt="whatsapp" width="30px"></a>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <div style="max-width:600px;width:100%; text-align: center; margin-top: 20px;">
+                <a target="_blank" href="https://www.tudoforte.com.br/">
+                  <img class="logo" src="https://raphaelfreire.github.io/email/img/logo-tudo-forte.png" alt="Logo Tudo Forte" width="300px">
+                </a>
+              </div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <table width="600" height="0" border="0" cellpadding="0" cellspacing="" align="center" marginheight="10">
+        <tbody>
+          <tr>
+            <td style="padding:20px 0px 15px 10px" width="430" height="60">
+              <p align="center">
+                <font size="1" face="Arial" color="#121135" cellpadding="" style="font-size:11px;" bgcolor="#e5e5e538">
+
+                  G. M. Oliveira Eletrônicos e Informática LTDA - CNPJ: 17.666.002/0001-17 <br />
+                  Rua Floriano Peixoto, 446, Boa Vista, São José do Rio Preto, SP, CEP: 15025-110<br />
+
+
+                  <a href="http://g.page/TudoForte?share">Como chegar via Google Maps</a>
+
+
+                  Central de Relacionamento - Segunda a Sexta das 8h às 18h
+
+                </font>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+     
+    
+</body>
+
+</html>
